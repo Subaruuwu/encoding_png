@@ -28,5 +28,11 @@ def start_app():
 
     start_button = make_button(window, 'Начать', lambda: save_as_png(load_image_from_disk(file_patch.input_patch), get_new_patch(file_patch.input_patch, file_patch.output_patch), inverted_dict_of_filters[combo_filters.get()], int(combo_compression.get()), status_label), 4, 0, 0, 10, state='disabled')
 
+    start_button = make_button(window, 'Сжать папку', lambda: save_as_png(load_image_from_disk(file_patch.input_patch),
+                                                                     get_new_patch(file_patch.input_patch,
+                                                                                   file_patch.output_patch),
+                                                                     inverted_dict_of_filters[combo_filters.get()],
+                                                                     int(combo_compression.get()), status_label), 4, 0,
+                               0, 10, state='disabled')
 
     window.mainloop()

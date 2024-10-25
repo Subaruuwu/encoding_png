@@ -6,7 +6,13 @@ from src.file_utils import get_file_size, calculate_compression_ratio
 from data.data_file import file_patch
 import os
 
-
+# def save_many_images(list_of_images):
+#     for image in list_of_images:
+#             save_as_png(load_image_from_disk(file_patch.input_patch),
+#                     get_new_patch(file_patch.input_patch,
+#                                   file_patch.output_patch),
+#                     inverted_dict_of_filters[combo_filters.get()],
+#                     int(combo_compression.get()), status_label)
 def save_as_png(image, filename, filter_type, compression_level, text_label):
     label = text_label
     config_text(label, 'Конвертация началась\nЭто может занять некоторое\n время\nПожалйста подождите')
